@@ -9,7 +9,7 @@
                             <span class="mb-8">
                                 <NuxtImg
                                     src="/feliya-transparent.svg"
-                                    class="h-fit w-auto"
+                                    class="h-44 md:h-56 w-auto"
                                 />
                             </span>
                             <div class="flex flex-col items-center gap-6">
