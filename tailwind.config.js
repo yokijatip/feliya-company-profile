@@ -4,8 +4,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: colors.orange,
-                secondary: colors.blue,
+                biruDongker: "#003D6B",
             },
         },
     },

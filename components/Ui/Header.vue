@@ -5,11 +5,11 @@ const menus = ref([
         to: "/",
     },
     {
-        label: "About",
-        to: "/about",
+        label: "Produk",
+        to: "/product",
     },
     {
-        label: "Contact",
+        label: "Kontak",
         to: "/contact",
     },
 ]);
@@ -17,7 +17,7 @@ const menus = ref([
 
 <template>
     <header
-        class="sticky top-0 w-full z-30 backdrop-blur-md shadow-lg shadow-gray-200 h-[68px] flex"
+        class="sticky top-0 w-full z-30 border-b bg-white border-gray-500 h-[68px] flex"
     >
         <PageContainer class="flex-1 flex items-center justify-between">
             <NuxtLink to="/" class="">
