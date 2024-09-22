@@ -1,6 +1,6 @@
 <template>
     <!-- Start Your Code -->
-    <div class="flex flex-col flex-1">
+    <div class="flex flex-col flex-1 bg-white">
         <!-- Hero Section -->
         <section
             class="relative flex justify-center items-center min-h-[calc(100vh-68px)] bg-cover bg-center bg-no-repeat"
@@ -122,7 +122,7 @@
                         <p class="text-md">Konsultasi Gratis</p>
                     </div>
 
-                    <!-- Item 1  -->
+                    <!-- Item 3  -->
                     <div class="flex items-center gap-4">
                         <svg
                             class="w-6 h-6"
@@ -154,13 +154,15 @@
         <!-- Service Section -->
         <section class="container mx-auto flex flex-col pb-4">
             <!-- Title -->
-
-            <div class="divide-y-2 py-8 px-4 text-center">
-                <p class="text-orange-500 font-semibold text-lg pb-2">
+            <SectionTitle>
+                <template #english-version>
                     Our Best Service
-                </p>
-                <h1 class="text-4xl font-bold pt-4">Layanan Terbaik Kami</h1>
-            </div>
+                </template>
+
+                <template #indonesian-version>
+                    Layanan Terbaik Kami
+                </template>
+            </SectionTitle>
 
             <div
                 class="py-8 flex flex-col md:flex-row gap-4 px-4 items-baseline justify-center"
@@ -202,14 +204,15 @@
         <section>
             <div class="container mx-auto my-12">
                 <!-- Title -->
-                <div class="divide-y-2 py-8 px-4 text-center">
-                    <p class="text-orange-500 font-semibold text-lg pb-2">
+                <SectionTitle>
+                    <template #english-version>
                         Why Choose Us
-                    </p>
-                    <h1 class="text-4xl font-bold pt-4">
+                    </template>
+                    
+                    <template #indonesian-version>
                         Mengapa Memilih Kami
-                    </h1>
-                </div>
+                    </template>
+                </SectionTitle>
 
                 <!-- Content -->
                 <div class="max-w-4xl mx-auto px-5 my-12">
@@ -237,11 +240,33 @@
                 </div>
             </div>
         </section>
+        
+        <!-- About Us -->
+        <section class="container mx-auto flex flex-col my-12">
+            <SectionTitle>
+                <template #english-version>
+                    About Us
+                </template>
+                <template #indonesian-version>
+                    Tentang Kami
+                </template>
+            </SectionTitle>
+
+            <!-- Content -->
+            <div>
+                
+            </div>
+            
+            
+            
+        </section>
     </div>
     <!-- End Of Your Code -->
 </template>
 
 <script setup>
+import SectionTitle from "~/components/Title/SectionTitle.vue";
+
 definePageMeta({
     layout: "page",
 });
