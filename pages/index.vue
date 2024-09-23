@@ -155,13 +155,9 @@
         <section class="container mx-auto flex flex-col pb-4">
             <!-- Title -->
             <SectionTitle>
-                <template #english-version>
-                    Our Best Service
-                </template>
+                <template #english-version> Our Best Service </template>
 
-                <template #indonesian-version>
-                    Layanan Terbaik Kami
-                </template>
+                <template #indonesian-version> Layanan Terbaik Kami </template>
             </SectionTitle>
 
             <div
@@ -205,10 +201,8 @@
             <div class="container mx-auto my-12">
                 <!-- Title -->
                 <SectionTitle>
-                    <template #english-version>
-                        Why Choose Us
-                    </template>
-                    
+                    <template #english-version> Why Choose Us </template>
+
                     <template #indonesian-version>
                         Mengapa Memilih Kami
                     </template>
@@ -240,25 +234,116 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- About Us -->
         <section class="container mx-auto flex flex-col my-12">
             <SectionTitle>
-                <template #english-version>
-                    About Us
-                </template>
-                <template #indonesian-version>
-                    Tentang Kami
-                </template>
+                <template #english-version> About Us </template>
+                <template #indonesian-version> Tentang Kami </template>
             </SectionTitle>
 
             <!-- Content -->
-            <div>
-                
+            <div class="flex flex-row justify-evenly my-12">
+                <!-- Text -->
+                <div class="flex flex-col gap-8">
+                    <h1 class="text-4xl max-w-lg font-medium text-slate-800">
+                        Ahli dalam Solusi AC, Mengutamakan Kenyamanan Anda
+                    </h1>
+                    <p class="text-gray-500 max-w-lg text-lg flex-1">
+                        Feliya Laju Teknik adalah perusahaan layanan dan service
+                        AC yang berfokus pada kualitas dan kepuasan pelanggan.
+                    </p>
+
+                    <!-- Statistics -->
+                    <div class="flex justify-between">
+                        <!-- Content 1 -->
+                        <div class="flex gap-2 flex-col">
+                            <h1 class="text-5xl text-orange-500 font-semibold">
+                                200+
+                            </h1>
+                            <p class="text-gray-500 text-xl">Bisnis Terbantu</p>
+                        </div>
+
+                        <!-- Vertical Line  -->
+                        <div class="h-fill w-[2px] bg-gray-200"></div>
+
+                        <!-- Content 2 -->
+                        <div class="flex gap-2 flex-col">
+                            <h1 class="text-5xl text-orange-500 font-semibold">
+                                100+
+                            </h1>
+                            <p class="text-gray-500 text-xl">
+                                Proyek Terselesaikan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="">
+                    <NuxtImg
+                        src="https://www.aircon-company.com/wp-content/uploads/2024/03/man-kneeling-with-screwdriver-near-air-conditioner-outdoors.jpg"
+                        class="h-48 md:h-96 w-auto"
+                    />
+                </div>
             </div>
-            
-            
-            
+
+            <!-- About Us Contact -->
+            <div class="flex flex-row justify-evenly my-12">
+                <!-- Text -->
+                <div class="flex flex-col gap-8">
+                    <h1 class="text-4xl max-w-lg font-medium text-slate-800">
+                        Hubungi Kami
+                    </h1>
+                    <p class="text-gray-500 max-w-lg text-lg">
+                        Kami ingin sekali mendengar dari Anda! Jika Anda
+                        memiliki pertanyaan, butuh dukungan, atau ingin
+                        mempelajari lebih lanjut tentang layanan kami, tim kami
+                        siap membantu.
+                    </p>
+
+                    <UButton
+                        icon="heroicons:chat-bubble-oval-left-ellipsis"
+                        size="lg"
+                        color="primary"
+                        variant="solid"
+                        label="Button"
+                        class="w-fit"
+                        :trailing="false"
+                        >Whatsapp</UButton
+                    >
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <div class="max-w-4xl mx-auto px-5 my-12">
+                        <div class="grid md:grid-cols-2 gap-10 my-12">
+                            <div
+                                class="flex flex-col gap-4 items-start"
+                                v-for="contact in contactInfo"
+                                :key="contact"
+                            >
+                                <span
+                                    class="text-orange-600 bg-orange-500/10 p-3 rounded-full"
+                                    v-html="contact.svg"
+                                >
+                                </span>
+                                <div class="flex flex-col">
+                                    <h3 class="font-semibold text-xl">
+                                        {{ contact.title }}
+                                    </h3>
+                                    <p class="mt-1 text-gray-500">
+                                        {{ contact.description_1 }}
+                                    </p>
+                                    <p class="mt-1 text-gray-500">
+                                        {{ contact.description_2 }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <!-- End Of Your Code -->
@@ -273,7 +358,6 @@ definePageMeta({
 
 useSeoMeta({
     title: "Home",
-    // Ini ditimpa karena kita sudah setup title template nya di app vue, karena biasanya di halaman home kita tidak menggunakkan title template
     titleTemplate: "",
 });
 
@@ -376,6 +460,23 @@ const whyChooseUs = ref([
                                     height="15"
                                     fill="none"
                                     class="w-8 h-8"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.521 2.624a2 2 0 0 1 2.958 0l1.02 1.12a2 2 0 0 0 1.572.651l1.513-.07a2 2 0 0 1 2.092 2.09l-.071 1.514a2 2 0 0 0 .651 1.572l1.12 1.02a2 2 0 0 1 0 2.958l-1.12 1.02a2 2 0 0 0-.651 1.572l.07 1.513a2 2 0 0 1-2.09 2.092l-1.514-.071a2 2 0 0 0-1.572.651l-1.02 1.12a2 2 0 0 1-2.958 0l-1.02-1.12a2 2 0 0 0-1.572-.651l-1.513.07a2 2 0 0 1-2.092-2.09l.071-1.514a2 2 0 0 0-.651-1.572l-1.12-1.02a2 2 0 0 1 0-2.958l1.12-1.02a2 2 0 0 0 .651-1.572l-.07-1.513a2 2 0 0 1 2.09-2.092l1.514.071a2 2 0 0 0 1.572-.651z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 12l2 2l4-4"/></g></svg>`,
+    },
+]);
+
+// ABOUT SECTION
+// About Section - Contact Info
+const contactInfo = ref([
+    {
+        title: "Alamat Kami",
+        description_1: "Gedung Feliya Laju Teknik",
+        description_2: "Blok M, Jakarta Selatan - Indonesia 40556",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" width="15" height=15 viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M9.5 14.5L3 21"/><path fill="currentColor" d="m5 9.485l9.193 9.193l1.697-1.697l-.393-3.787l5.51-4.673l-5.85-5.85l-4.674 5.51l-3.786-.393z"/></g></svg>`,
+    },
+    {
+        title: "Informasi Kontak",
+        description_1: "+62 812 3456 7890",
+        description_2: "p8N7M@example.com",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" width="15" height="15" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.118 14.702L14 15.5c-2.782-1.396-4.5-3-5.5-5.5l.77-4.13L7.815 2H4.064c-1.128 0-2.016.932-1.847 2.047c.42 2.783 1.66 7.83 5.283 11.453c3.805 3.805 9.286 5.456 12.302 6.113c1.165.253 2.198-.655 2.198-1.848v-3.584z"/></svg>`,
     },
 ]);
 </script>
