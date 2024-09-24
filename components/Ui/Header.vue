@@ -17,7 +17,7 @@ const menus = ref([
 
 <template>
     <header
-        class="sticky top-0 w-full z-30 border-b bg-white border-gray-500 h-[68px] flex"
+        class="sticky top-0 w-full z-30 border-b bg-white border-gray-500 h-[68px] flex text-slate-700"
     >
         <PageContainer class="flex-1 flex items-center justify-between">
             <NuxtLink to="/" class="">
@@ -25,9 +25,9 @@ const menus = ref([
             </NuxtLink>
 
             <!-- Nav Menu Using Variabel Menus in Script Setup -->
-            <div class="divide-x-2 flex gap-4 divide-gray-500/50 items-center">
+            <div class="flex gap-4 divide-gray-500/50 items-center">
                 <!-- Menus -->
-                <nav class="pr-4">
+                <nav class="">
                     <ul class="flex gap-4">
                         <li v-for="(menu, i) in menus" :key="i">
                             <NuxtLink

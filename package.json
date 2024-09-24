@@ -12,6 +12,7 @@
     "dependencies": {
         "@nuxt/image": "^1.8.0",
         "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
+        "daisyui": "^4.12.10",
         "nuxt": "^3.13.0",
         "vue": "latest",
         "vue-router": "latest"
