@@ -14,11 +14,11 @@
 
             <!-- Text di tengah -->
             <div class="relative z-10 text-center text-white">
-                <h1 class="text-4xl font-bold mx-auto">
+                <h1 class="text-2xl md:text-4xl font-bold mx-auto">
                     Perusahaan AC dan pendingin <br />
                     yang Terpercaya
                 </h1>
-                <p class="text-lg mt-2 w-1/2 mx-auto">
+                <p class="text-sm md:text-lg mt-2 md:w-1/2 mx-auto">
                     Di PT Feliya Laju Teknik , kami dapat memberi Anda berbagai
                     layanan untuk kebutuhan AC dan pendingin Anda. Kami berbasis
                     di Jakarta, Indonesia dan mencakup Jabodetabek, Bandung, dan
@@ -161,7 +161,9 @@
                 <template #indonesian-version> Layanan Terbaik Kami </template>
             </SectionTitle>
 
-            <div class="py-8 flex flex-col md:flex-row gap-4 items-baseline">
+            <div
+                class="md:py-8 p-4 flex flex-col md:flex-row gap-4 items-baseline"
+            >
                 <!-- Item 1 -->
                 <div
                     class="max-w-sm rounded overflow-hidden shadow-lg"
@@ -242,10 +244,14 @@
             </SectionTitle>
 
             <!-- Content -->
-            <div class="flex flex-row justify-between my-12">
+            <div
+                class="flex md:flex-row flex-col justify-between md:my-12 my-4 p-4"
+            >
                 <!-- Text -->
                 <div class="flex flex-col gap-8">
-                    <h1 class="text-4xl max-w-lg font-medium text-slate-800">
+                    <h1
+                        class="md:text-4xl text-3xl max-w-lg font-medium text-slate-800"
+                    >
                         Ahli dalam Solusi AC, Mengutamakan Kenyamanan Anda
                     </h1>
                     <p class="text-gray-500 max-w-lg text-lg flex-1">
@@ -254,13 +260,17 @@
                     </p>
 
                     <!-- Statistics -->
-                    <div class="flex justify-between">
+                    <div class="flex justify-between md:my-0 mb-6">
                         <!-- Content 1 -->
                         <div class="flex gap-2 flex-col">
-                            <h1 class="text-5xl text-orange-500 font-semibold">
+                            <h1
+                                class="md:text-5xl text-4xl text-orange-500 font-semibold"
+                            >
                                 200+
                             </h1>
-                            <p class="text-gray-500 text-xl">Bisnis Terbantu</p>
+                            <p class="text-gray-500 md:text-xl text-lg">
+                                Bisnis Terbantu
+                            </p>
                         </div>
 
                         <!-- Vertical Line  -->
@@ -268,10 +278,12 @@
 
                         <!-- Content 2 -->
                         <div class="flex gap-2 flex-col">
-                            <h1 class="text-5xl text-orange-500 font-semibold">
+                            <h1
+                                class="md:text-5xl text-4xl text-orange-500 font-semibold"
+                            >
                                 100+
                             </h1>
-                            <p class="text-gray-500 text-xl">
+                            <p class="text-gray-500 md:text-xl text-lg">
                                 Proyek Terselesaikan
                             </p>
                         </div>
@@ -279,16 +291,18 @@
                 </div>
 
                 <!-- Image -->
-                <div class="">
+                <div class="mx-auto md:mx-0">
                     <NuxtImg
                         src="https://www.aircon-company.com/wp-content/uploads/2024/03/man-kneeling-with-screwdriver-near-air-conditioner-outdoors.jpg"
-                        class="h-48 md:h-96 w-auto"
+                        class="h-48 md:h-96 md:w-auto rounded-md"
                     />
                 </div>
             </div>
 
             <!-- About Us Contact -->
-            <div class="flex flex-row justify-evenly my-12 gap-10">
+            <div
+                class="flex md:flex-row flex-col md:p-0 p-4 justify-evenly my-12 gap-10"
+            >
                 <!-- Text -->
                 <div class="flex flex-1 flex-col gap-8">
                     <h1 class="text-4xl max-w-lg font-medium text-slate-800">
@@ -300,24 +314,13 @@
                         mempelajari lebih lanjut tentang layanan kami, tim kami
                         siap membantu.
                     </p>
-
-                    <UButton
-                        icon="heroicons:chat-bubble-oval-left-ellipsis"
-                        size="lg"
-                        color="primary"
-                        variant="solid"
-                        label="Button"
-                        class="w-fit"
-                        :trailing="false"
-                        >Whatsapp</UButton
-                    >
                 </div>
 
                 <!-- Contact -->
                 <div id="contact" class="flex items-start">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div
-                            class="flex flex-col items-center"
+                            class="flex flex-col md:items-center items-start gap-2"
                             v-for="contact in contactInfo"
                             :key="contact"
                         >
@@ -326,7 +329,9 @@
                                 v-html="contact.svg"
                             >
                             </span>
-                            <div class="flex flex-col items-center">
+                            <div
+                                class="flex flex-col md:items-center items-start"
+                            >
                                 <h3 class="font-semibold text-xl">
                                     {{ contact.title }}
                                 </h3>

@@ -1,7 +1,9 @@
 <template>
     <footer class="border-t bg-blue-950">
         <div>
-            <div class="footer max-w-full text-white p-10 flex justify-evenly">
+            <div
+                class="footer max-w-full text-white p-10 flex flex-col md:flex-row justify-evenly"
+            >
                 <aside>
                     <img src="/public/images/feliya.png" class="h-24" />
                     <p>
@@ -17,7 +19,7 @@
                         <h1 class="text-lg font-thin">k9iXU@example.com</h1>
                     </div>
                 </aside>
-                <div class="flex gap-28">
+                <div class="flex md:flex-row flex-col md:gap-28 gap-10">
                     <nav class="flex flex-col gap-2">
                         <h6 class="footer-title">Layanan</h6>
                         <a
