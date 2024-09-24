@@ -3,6 +3,7 @@
     <div class="flex flex-col flex-1 bg-white">
         <!-- Hero Section -->
         <section
+            id="home"
             class="relative flex justify-center items-center min-h-[calc(100vh-68px)] bg-cover bg-center bg-no-repeat"
             style="
                 background-image: url('https://us.images.westend61.de/0001342695pw/worker-repairing-air-conditioner-EYF00957.jpg');
@@ -152,7 +153,7 @@
         </section>
 
         <!-- Service Section -->
-        <section class="container-lg mx-auto flex flex-col">
+        <section id="services" class="container-lg mx-auto flex flex-col">
             <!-- Title -->
             <SectionTitle>
                 <template #english-version> Our Best Service </template>
@@ -234,7 +235,7 @@
         </section>
 
         <!-- About Us -->
-        <section class="container-lg mx-auto flex flex-col my-12">
+        <section id="about" class="container-lg mx-auto flex flex-col my-12">
             <SectionTitle>
                 <template #english-version> About Us </template>
                 <template #indonesian-version> Tentang Kami </template>
@@ -313,7 +314,7 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="flex items-start">
+                <div id="contact" class="flex items-start">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div
                             class="flex flex-col items-center"

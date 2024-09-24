@@ -1,0 +1,25 @@
+<header
+        class="sticky top-0 w-full z-30 border-b bg-white border-gray-500 h-[68px] flex text-slate-700"
+    >
+        <PageContainer class="flex-1 flex items-center justify-between">
+            <NuxtLink to="/" class="">
+                <NuxtImg src="/feliya-transparent.svg" class="h-16 w-auto" />
+            </NuxtLink>
+
+            <!-- Nav Menu Using Variabel Menus in Script Setup -->
+            <div class="flex gap-4 divide-gray-500/50 items-center">
+                <!-- Menus -->
+                <nav class="">
+                    <ul class="flex gap-4">
+                        <li v-for="(menu, i) in menus" :key="i">
+                            <NuxtLink
+                                :to="menu.to"
+                                class="hover:text-orange-500 transition-colors duration-300"
+                                >{{ menu.label }}</NuxtLink
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </PageContainer>
+    </header>
